@@ -262,7 +262,6 @@ void wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytkownicy)
             uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
             uzytkownicy.push_back(uzytkownik);
         }
-
     }
     plikTekstowy.close();
 }

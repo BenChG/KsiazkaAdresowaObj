@@ -14,7 +14,6 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
-
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     string login;
@@ -64,3 +63,8 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
 }
+
+  void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
+  {
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+  }
