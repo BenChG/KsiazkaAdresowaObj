@@ -1,2 +1,6 @@
 1|Ania|1234|
 2|Maria|12345|
+3|Adam|1357|
+4|Marian|5310|
+5|Tomek|123123|
+6|Daniel|4343|
