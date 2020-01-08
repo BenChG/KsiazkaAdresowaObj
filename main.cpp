@@ -6,11 +6,13 @@ int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt");
     //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    //ksiazkaAdresowa.rejestracjaUzytkownika();
+    // ksiazkaAdresowa.rejestracjaUzytkownika();
     ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
     //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    //ksiazkaAdresowa.idZalogowanegoUzytkownika = 0;
 
     return 0;
 }

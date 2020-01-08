@@ -39,7 +39,7 @@ void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
 bool czyIstniejeLogin(vector <Uzytkownik> &uzytkownicy, string login);
 int pobierzIdNowegoUzytkownika(vector <Uzytkownik> &uzytkownicy);
 Uzytkownik podajDaneNowegoUzytkownika(vector <Uzytkownik> &uzytkownicy);
-void rejestracjaUzytkownika(vector <Uzytkownik> &uzytkownicy);
+void sstracjaUzytkownika(vector <Uzytkownik> &uzytkownicy);
 int logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy);
 void zmianaHaslaZalogowanegoUzytkownika(vector <Uzytkownik> &uzytkownicy, int idZalogowanegoUzytkownika);
 string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
