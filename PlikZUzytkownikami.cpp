@@ -113,8 +113,6 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
         {
             liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(*itr);
 
-            cout<<liniaZDanymiUzytkownika<<endl;
-
             if (itr == itrKoniec)
             {
                plikTekstowy << liniaZDanymiUzytkownika;

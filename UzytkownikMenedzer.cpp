@@ -122,7 +122,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     {
         if (itr -> pobierzId() == idZalogowanegoUzytkownika)
         {
-            itr -> pobierzHaslo() = noweHaslo;
+            itr -> ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
         }

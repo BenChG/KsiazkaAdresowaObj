@@ -14,7 +14,7 @@ using namespace std;
 
 class UzytkownikMenedzer
 {
-    int idZalogowanegoUzytkownika=0;
+    int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
 
     Uzytkownik podajDaneNowegoUzytkownika();
