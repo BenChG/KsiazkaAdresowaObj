@@ -12,6 +12,7 @@
 
 using namespace std;
 
+
 class UzytkownikMenedzer
 {
     int idZalogowanegoUzytkownika;
@@ -24,7 +25,8 @@ class UzytkownikMenedzer
 
 
 public:
-    UzytkownikMenedzer (string nazwaPlikuZUzytkownikami) : plikZUzytkownikami (nazwaPlikuZUzytkownikami) {
+    UzytkownikMenedzer (string nazwaPlikuZUzytkownikami, int IDZALOGOWANEGOUZYTKOWNIKA=0) : plikZUzytkownikami (nazwaPlikuZUzytkownikami),
+    idZalogowanegoUzytkownika(IDZALOGOWANEGOUZYTKOWNIKA){
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
         };
     void rejestracjaUzytkownika();
@@ -32,6 +34,9 @@ public:
     string wczytajLinie();
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
-};
+    char wczytajZnak();
+    int pobierzIdZalogowanegoUzytkownika();
 
+
+};
 #endif

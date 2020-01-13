@@ -94,7 +94,8 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
                     idZalogowanegoUzytkownika = itr -> pobierzId();
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return itr -> pobierzId();
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -134,4 +135,29 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
          cout << "Aby zmienic haslo, nalezy sie najpierw zalogowac." << endl;
          system("pause");
         }
+}
+
+char UzytkownikMenedzer::wczytajZnak()
+{
+    string wejscie = "";
+    char znak  = {0};
+
+    while (true)
+    {
+        getline(cin, wejscie);
+
+        if (wejscie.length() == 1)
+        {
+            znak = wejscie[0];
+            break;
+        }
+        cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
+    }
+    return znak;
+}
+
+
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
 }

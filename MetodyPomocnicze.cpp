@@ -7,3 +7,5 @@ string MetodyPomocnicze::konwersjaIntNaString(int liczba)
     string str = ss.str();
     return str;
 }
+
+

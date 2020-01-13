@@ -18,7 +18,9 @@ public:
     void wypiszWszystkichUzytkownikow();
     int  logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
-    void wczytajUzytkownikowZPliku();
+    char wybierzOpcjeZMenuGlownego();
+    int pobierzIdZalogowanegoUzytkownika();
+
 };
 
 #endif
