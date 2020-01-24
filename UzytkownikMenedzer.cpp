@@ -137,6 +137,21 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
         }
 }
 
+void UzytkownikMenedzer::wylogowanieUzytkownika()
+{
+ idZalogowanegoUzytkownika = 0;
+}
+
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
+}
+
+
 char UzytkownikMenedzer::wczytajZnak()
 {
     string wejscie = "";
@@ -155,7 +170,6 @@ char UzytkownikMenedzer::wczytajZnak()
     }
     return znak;
 }
-
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {

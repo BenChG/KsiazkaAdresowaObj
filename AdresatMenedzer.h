@@ -1,25 +1,30 @@
 #ifndef ADRESATMENEDZER_H
 #define ADRESATMENEDZER_H
 
-using namespace std;
-
 #include <iostream>
 #include <vector>
-#include <windows.h>
-#include <fstream>
-#include <sstream>
+#include "Adresat.h"
+#include "PlikZAdresatami.h"
+using namespace std;
 
 class AdresatMenedzer
 {
-vector <Adresat> adresaci;
+  const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
+  Adresat adresat;
+  vector <Adresat> adresaci;
+  PlikZAdresatami plikZAdresatami;
 
+  Adresat podajDaneNowegoAdresata();
 
 public:
-int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
-
+    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    : plikZAdresatami (nazwaPlikuZAdresatami),ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    };
+   // void dodajAdresata();
+   void wyswietlWszystkichAdresatow();
+    void wyswietlDaneAdresata();
 };
-
-
-
 
 #endif

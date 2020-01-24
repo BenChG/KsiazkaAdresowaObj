@@ -1,36 +1,31 @@
 #include "AdresatMenedzer.h"
 
-int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
+void AdresatMenedzer::wyswietlDaneAdresata()
 {
-    Adresat adresat;
-    int idOstatniegoAdresata = 0;
-    string daneJednegoAdresataOddzielonePionowymiKreskami = "";
-    string daneOstaniegoAdresataWPliku = "";
-    fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    cout << endl << "Id:         " << adresat.pobierzId << endl;
+    cout << "Imie:               " << adresat.pobierzImie << endl;
+    cout << "Nazwisko:           " << adresat.pobierzNazwisko << endl;
+    cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu << endl;
+    cout << "Email:              " << adresat.pobierzEmail << endl;
+    cout << "Adres:              " << adresat.pobierzAdres << endl;
+}
 
-    if (plikTekstowy.good() == true)
+void AdresatMenedzer::wyswietlWszystkichAdresatow()
+{
+    system("cls");
+    if (!adresaci.empty())
     {
-        while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
+        cout << "             >>> ADRESACI <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Adresat> :: iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
         {
-            if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
-            {
-                adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
-                adresaci.push_back(adresat);
-            }
+            wyswietlDaneAdresata(*itr);
         }
-        daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
+        cout << endl;
     }
     else
-        cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
-
-    plikTekstowy.close();
-
-    if (daneOstaniegoAdresataWPliku != "")
     {
-        idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-        return idOstatniegoAdresata;
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
     }
-    else
-        return 0;
+    system("pause");
 }

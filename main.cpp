@@ -4,10 +4,10 @@ using namespace std;
 
 int main()
 {
- KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt","Adresaci.txt");
 //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
 
-char wybor;
+    char wybor;
     while (true)
     {
         cout << ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika();
@@ -33,15 +33,54 @@ char wybor;
             }
         }
 
-        //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
-        //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-        //ksiazkaAdresowa.rejestracjaUzytkownika();
-        // ksiazkaAdresowa.rejestracjaUzytkownika();
-        //ksiazkaAdresowa.logowanieUzytkownika();
-        //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-        //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-        //ksiazkaAdresowa.idZalogowanegoUzytkownika = 0;
+        else
+        {
+            wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
 
-        return 0;
+            switch (wybor)
+            {
+            //case '1':
+            //    idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+            //    break;
+            /*case '2':
+                wyszukajAdresatowPoImieniu(adresaci);
+                break;
+            case '3':
+                wyszukajAdresatowPoNazwisku(adresaci);
+                break;*/
+            case '4':
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow(adresaci);
+                break;
+            /*case '5':
+                idUsunietegoAdresata = usunAdresata(adresaci);
+                idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                break;
+            case '6':
+                edytujAdresata(adresaci);
+                break;
+            case '7':
+                zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
+                break;
+                */
+            case '8':
+                idZalogowanegoUzytkownika = 0;
+                adresaci.clear();
+                break;
+            }
+        }
     }
+    return 0;
+}
+
+//ksiazkaAdresowa.wczytajUzytkownikowZPliku();
+//ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+//ksiazkaAdresowa.rejestracjaUzytkownika();
+// ksiazkaAdresowa.rejestracjaUzytkownika();
+//ksiazkaAdresowa.logowanieUzytkownika();
+//ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+//ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+//ksiazkaAdresowa.idZalogowanegoUzytkownika = 0;
+
+return 0;
+}
 }
