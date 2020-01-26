@@ -69,8 +69,8 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
     uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 }
 
-int KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
-    adresatMenedzer.wyswietlWszystkichAdresatow();
+    adresatMenedzer->wyswietlWszystkichAdresatow();
 }
 

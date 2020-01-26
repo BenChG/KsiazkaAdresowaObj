@@ -49,7 +49,7 @@ int main()
                 wyszukajAdresatowPoNazwisku(adresaci);
                 break;*/
             case '4':
-                ksiazkaAdresowa.wyswietlWszystkichAdresatow(adresaci);
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             /*case '5':
                 idUsunietegoAdresata = usunAdresata(adresaci);
@@ -63,8 +63,8 @@ int main()
                 break;
                 */
             case '8':
-                idZalogowanegoUzytkownika = 0;
-                adresaci.clear();
+                //idZalogowanegoUzytkownika = 0;
+                //adresaci.clear();
                 break;
             }
         }
@@ -80,7 +80,3 @@ int main()
 //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 //ksiazkaAdresowa.idZalogowanegoUzytkownika = 0;
-
-return 0;
-}
-}
