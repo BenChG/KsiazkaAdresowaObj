@@ -63,8 +63,8 @@ int main()
                 break;
                 */
             case '8':
-                //idZalogowanegoUzytkownika = 0;
-                //adresaci.clear();
+                ksiazkaAdresowa.wylogowanieUzytkownika();
+                ksiazkaAdresowa.wyczyscWektorAdresaci();
                 break;
             }
         }

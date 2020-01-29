@@ -25,6 +25,7 @@ public:
    // void dodajAdresata();
    void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata(Adresat adresat);
+    void wyczyscWektorAdresaci();
 };
 
 #endif

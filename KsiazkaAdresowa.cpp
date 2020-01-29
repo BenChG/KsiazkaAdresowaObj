@@ -19,6 +19,11 @@ int KsiazkaAdresowa::logowanieUzytkownika()
     }
 }
 
+void KsiazkaAdresowa::wylogowanieUzytkownika()
+{
+   uzytkownikMenedzer.wylogowanieUzytkownika();
+}
+
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
@@ -74,3 +79,7 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
     adresatMenedzer->wyswietlWszystkichAdresatow();
 }
 
+void KsiazkaAdresowa::wyczyscWektorAdresaci()
+{
+    adresatMenedzer->wyczyscWektorAdresaci();
+}
