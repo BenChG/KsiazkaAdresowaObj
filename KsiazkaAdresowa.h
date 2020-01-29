@@ -30,7 +30,8 @@ public:
     void wypiszWszystkichUzytkownikow();
     int  logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
-    //void wylogowanieUzytkownika();
+    void wylogowanieUzytkownika();
+    void wyczyscWektorAdresaci();
     //void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     char wybierzOpcjeZMenuGlownego();

@@ -30,3 +30,8 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow()
     }
     system("pause");
 }
+
+ void AdresatMenedzer::wyczyscWektorAdresaci()
+ {
+    adresaci.clear();
+ }
