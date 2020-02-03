@@ -3,8 +3,13 @@
 
 #include <iostream>
 #include <vector>
+#include <windows.h>
+#include <sstream>
+
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
+#include "MetodyPomocnicze.h"
+
 using namespace std;
 
 class AdresatMenedzer
@@ -13,6 +18,7 @@ class AdresatMenedzer
   Adresat adresat;
   vector <Adresat> adresaci;
   PlikZAdresatami plikZAdresatami;
+  MetodyPomocnicze metodyPomocnicze;
 
   Adresat podajDaneNowegoAdresata();
 
@@ -22,10 +28,11 @@ public:
     {
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
-   // void dodajAdresata();
+   void dodajAdresata();
    void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata(Adresat adresat);
     void wyczyscWektorAdresaci();
+
 };
 
 #endif

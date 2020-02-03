@@ -41,7 +41,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
     cout << "9. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = uzytkownikMenedzer.wczytajZnak();
+    wybor = metodyPomocnicze.wczytajZnak();
 
     return wybor;
 }
@@ -54,17 +54,17 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Dodaj adresata" << endl;
-    cout << "2. Wyszukaj po imieniu" << endl;
-    cout << "3. Wyszukaj po nazwisku" << endl;
-    cout << "4. Wyswietl adresatow" << endl;
-    cout << "5. Usun adresata" << endl;
-    cout << "6. Edytuj adresata" << endl;
-    cout << "---------------------------" << endl;
-    cout << "7. Zmien haslo" << endl;
-    cout << "8. Wyloguj sie" << endl;
+   // cout << "2. Wyszukaj po imieniu" << endl;
+   // cout << "3. Wyszukaj po nazwisku" << endl;
+    cout << "2. Wyswietl adresatow" << endl;
+   // cout << "5. Usun adresata" << endl;
+   // cout << "6. Edytuj adresata" << endl;
+    //cout << "---------------------------" << endl;
+    cout << "3. Zmien haslo" << endl;
+    cout << "4. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = uzytkownikMenedzer.wczytajZnak();
+    wybor = metodyPomocnicze.wczytajZnak();
 
     return wybor;
 }
@@ -82,4 +82,17 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 void KsiazkaAdresowa::wyczyscWektorAdresaci()
 {
     adresatMenedzer->wyczyscWektorAdresaci();
+}
+
+void KsiazkaAdresowa::dodajAdresata()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+          adresatMenedzer->dodajAdresata();
+    }
+    else
+    {
+        cout << "Aby dodaæ adresata, nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
 }
